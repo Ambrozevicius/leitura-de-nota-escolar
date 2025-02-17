@@ -15,9 +15,19 @@ export class HomePage {
   n3=0;
   n4=0;
   res=0;
+  res_estado='';
 
   calcular() {
-    this.res = (this.n1 + this.n2 + this.n3 + this.n4) / 4
+    this.res = (this.n1 + this.n2 + this.n3 + this.n4) / 4;
+    
+    if (this.res < 3) {
+      this.res_estado = "Retido";
+    } 
+    else if(this.res > 6) {
+      this.res_estado = "Aprovado";
+    }
+    else{ 
+        this.res_estado = " de Recuperação";
+      }
   }
-
 }
